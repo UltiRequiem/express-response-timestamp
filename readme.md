@@ -1,6 +1,6 @@
 # Express Response Timestamp
 
-Zero Dependencies
+Middleware to add a timestamp to every `response.json()`, zero dependencies.
 
 ## Usage
 
