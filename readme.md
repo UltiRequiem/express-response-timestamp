@@ -6,7 +6,7 @@ Zero Dependencies
 
 ```js
 import express from "express";
-import timestampHandler from "../index.js";
+import timestampHandler from "express-response-timestamp";
 
 const app = express();
 
@@ -14,6 +14,7 @@ const PORT = 3005;
 
 app.use(timestampHandler()); // Default: `() => new Date().toUTCString()`
 // app.use(timestampHandler(() => new Date().toLocaleDateString()));
+// app.use(timestampHandler(moment().year));
 
 app.use("/", (_request, response) => {
   response.json({ foo: "bar", framework: "express" });
